@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas and SVG Example</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+        display: block;
+        margin: 20px auto;
+      }
+
+      svg {
+        display: block;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Canvas and SVG Example</h1>
+
+    <!-- Canvas Element -->
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+
+    <!-- SVG Element -->
+    <svg width="400" height="200">
+      <rect
+        x="50"
+        y="50"
+        width="300"
+        height="100"
+        fill="skyblue"
+        stroke="black"
+        stroke-width="2"
+      />
+      <circle
+        cx="200"
+        cy="125"
+        r="40"
+        fill="orange"
+        stroke="black"
+        stroke-width="2"
+      />
+      <text x="150" y="190" font-family="Arial" font-size="16" fill="black">
+        SVG Example
+      </text>
+    </svg>
+
+    <script>
+      // Canvas drawing
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "lightgreen";
+      ctx.fillRect(50, 50, 300, 100);
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(50, 50, 300, 100);
+      ctx.beginPath();
+      ctx.arc(200, 125, 40, 0, Math.PI * 2);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+      ctx.stroke();
+      ctx.font = "16px Arial";
+      ctx.fillStyle = "black";
+      ctx.fillText("Canvas Example", 150, 190);
+    </script>
+  </body>
+</html>

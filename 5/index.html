@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformation Example</title>
+    <style>
+      .transform-box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+        animation: transformAnimation 5s infinite alternate;
+      }
+
+      @keyframes transformAnimation {
+        0% {
+          transform: translate(0, 0) rotate(0) scale(1);
+        }
+        25% {
+          transform: translate(200px, 0) rotate(90deg) scale(1.5);
+        }
+        50% {
+          transform: translate(200px, 200px) rotate(180deg) scale(1);
+        }
+        75% {
+          transform: translate(0, 200px) rotate(270deg) scale(0.5);
+        }
+        100% {
+          transform: translate(0, 0) rotate(360deg) scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transform-box"></div>
+  </body>
+</html>
